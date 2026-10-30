@@ -1,0 +1,97 @@
+{
+  "subeler": [
+    {
+      "id": 1,
+      "adi": "İstanbul Merkez",
+      "sehir": "İstanbul"
+    },
+    {
+      "id": 2,
+      "adi": "Ankara Şube",
+      "sehir": "Ankara"
+    },
+    {
+      "id": 3,
+      "adi": "İzmir Şube",
+      "sehir": "İzmir"
+    },
+    {
+      "id": 4,
+      "adi": "Bursa Depo",
+      "sehir": "Bursa"
+    },
+    {
+      "id": 5,
+      "adi": "Antalya Şube",
+      "sehir": "Antalya"
+    }
+  ],
+  "sabitKiymetler": [
+    {
+      "id": 1,
+      "ad": "Merkez Ofis Binası",
+      "kategori": "BINA",
+      "alisTarihi": "2019-03-15",
+      "alisBedeli": 8500000,
+      "amortismanOrani": 2,
+      "durum": "AKTIF",
+      "subeId": 1,
+      "subeAdi": "İstanbul Merkez"
+    },
+    {
+      "id": 2,
+      "ad": "Dağıtım Aracı (Ford Transit)",
+      "kategori": "TASIT",
+      "alisTarihi": "2022-06-01",
+      "alisBedeli": 1250000,
+      "amortismanOrani": 20,
+      "durum": "AKTIF",
+      "subeId": 4,
+      "subeAdi": "Bursa Depo"
+    },
+    {
+      "id": 3,
+      "ad": "Toplantı Masası Seti",
+      "kategori": "DEMIRBAS",
+      "alisTarihi": "2020-09-20",
+      "alisBedeli": 849997,
+      "amortismanOrani": 10,
+      "durum": "SATILDI",
+      "subeId": 2,
+      "subeAdi": "Ankara Şube"
+    },
+    {
+      "id": 4,
+      "ad": "CNC Torna Tezgâhı",
+      "kategori": "MAKINE",
+      "alisTarihi": "2018-01-10",
+      "alisBedeli": 2400000,
+      "amortismanOrani": 10,
+      "durum": "HURDA",
+      "subeId": 3,
+      "subeAdi": "İzmir Şube"
+    },
+    {
+      "ad": "Lazer Makinesi",
+      "kategori": "DEMIRBAS",
+      "alisTarihi": "2026-10-27",
+      "alisBedeli": 80000,
+      "amortismanOrani": 22,
+      "durum": "HURDA",
+      "subeId": 2,
+      "subeAdi": "Ankara Şube",
+      "id": 5
+    },
+    {
+      "ad": "CNC Makinesi",
+      "kategori": "MAKINE",
+      "alisTarihi": "2026-10-23",
+      "alisBedeli": 849990,
+      "amortismanOrani": 16,
+      "durum": "AKTIF",
+      "subeId": 2,
+      "subeAdi": "Ankara Şube",
+      "id": 6
+    }
+  ]
+}

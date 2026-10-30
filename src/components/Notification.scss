@@ -1,0 +1,39 @@
+.notif-stack {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: calc(100vw - 32px);
+}
+
+.notif {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 260px;
+  padding: 12px 14px;
+  border-radius: var(--radius);
+  background: var(--ink);
+  color: #fff;
+  box-shadow: var(--shadow-lg);
+  border-left: 4px solid var(--ok);
+
+  &--error { border-left-color: var(--danger); }
+  &--info { border-left-color: var(--accent); }
+
+  &__msg { flex: 1; }
+  &__link { color: #9db8ff; font-weight: 600; white-space: nowrap; }
+  &__x {
+    background: none;
+    border: 0;
+    color: #fff;
+    opacity: 0.6;
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer;
+    &:hover { opacity: 1; }
+  }
+}

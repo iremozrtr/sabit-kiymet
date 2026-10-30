@@ -1,0 +1,60 @@
+.kart {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &__body {
+    padding: 20px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+  }
+
+  &__foot {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+  &__sil { margin-right: auto; }
+
+  &--modal {
+    .kart__body { padding: 0; border: 0; }
+  }
+}
+
+.form-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+
+  .field { flex: 1 1 calc(50% - 8px); }
+}
+
+.sube-picker {
+  display: flex;
+  gap: 6px;
+  .input { cursor: pointer; }
+}
+
+.tabs {
+  display: flex;
+  gap: 4px;
+  border-bottom: 1px solid var(--line);
+}
+
+.tab {
+  padding: 8px 16px;
+  font: inherit;
+  font-weight: 500;
+  color: var(--muted);
+  background: none;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  &--on { color: var(--accent); border-bottom-color: var(--accent); }
+}
+
+@media (max-width: 640px) {
+  .form-grid .field { flex-basis: 100%; }
+  .kart__foot { flex-wrap: wrap; }
+}

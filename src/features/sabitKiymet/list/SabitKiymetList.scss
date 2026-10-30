@@ -1,0 +1,8 @@
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  .input { flex: 1 1 200px; width: auto; }
+  .input[type="search"] { flex: 2 1 260px; }
+}

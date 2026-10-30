@@ -1,0 +1,24 @@
+.sube-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.sube-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  text-align: left;
+  font: inherit;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  cursor: pointer;
+
+  span { color: var(--muted); font-size: 13px; }
+  &:hover { border-color: var(--accent); background: var(--accent-soft); }
+  &--active { border-color: var(--accent); background: var(--accent-soft); }
+}
