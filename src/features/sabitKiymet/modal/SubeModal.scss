@@ -4,7 +4,6 @@
   gap: 6px;
   margin-top: 12px;
 }
-
 .sube-item {
   display: flex;
   align-items: center;
@@ -21,4 +20,5 @@
   span { color: var(--muted); font-size: 13px; }
   &:hover { border-color: var(--accent); background: var(--accent-soft); }
   &--active { border-color: var(--accent); background: var(--accent-soft); }
+
 }

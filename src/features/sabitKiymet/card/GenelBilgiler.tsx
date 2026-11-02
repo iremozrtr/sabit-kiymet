@@ -13,11 +13,9 @@ interface GenelBilgilerProps {
   onSubeSec: () => void;
   onSubeTemizle: () => void;
 }
-
 export function GenelBilgiler({ formik, yillikAmortisman, onSubeSec, onSubeTemizle }: GenelBilgilerProps) {
   const { values, errors, touched, handleChange, handleBlur } = formik;
   const hata = (alan: keyof SabitKiymetForm) => (touched[alan] ? errors[alan] : undefined);
-
   return (
     <div className="form-grid">
       <FormField etiket="Ad" htmlFor="ad" zorunlu hata={hata("ad")}>
@@ -45,7 +43,6 @@ export function GenelBilgiler({ formik, yillikAmortisman, onSubeSec, onSubeTemiz
           onBlur={handleBlur}
         />
       </FormField>
-
       <FormField etiket="Alış Bedeli (₺)" htmlFor="alisBedeli" zorunlu hata={hata("alisBedeli")}>
         <input
           id="alisBedeli"
@@ -106,7 +103,7 @@ export function GenelBilgiler({ formik, yillikAmortisman, onSubeSec, onSubeTemiz
           </button>
           {values.subeId !== 0 && (
             <button type="button" className="btn btn--ghost" onClick={onSubeTemizle} aria-label="Şubeyi temizle">
-              ×
+              × 
             </button>
           )}
         </div>

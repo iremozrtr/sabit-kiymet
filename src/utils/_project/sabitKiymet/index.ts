@@ -1,10 +1,6 @@
-/**
- * Sabit Kıymet yardımcı fonksiyonları — tek yerden export.
- * (amortisman hesapları + biçimlendirme)
- */
+
 import { Durum, Kategori, SabitKiymetForm } from "../../../types/sabitKiymet.types";
 
-/* ----------------------------- Format ------------------------------ */
 const paraFormatter = new Intl.NumberFormat("tr-TR", {
   style: "currency",
   currency: "TRY",
@@ -19,7 +15,6 @@ export function formatYuzde(deger: number): string {
   return `%${Number.isFinite(deger) ? deger : 0}`;
 }
 
-/** "2024-03-15" -> "15.03.2024" (saat dilimi kayması olmasın diye string üzerinden) */
 export function formatTarih(iso: string): string {
   if (!iso) return "—";
   const [y, m, d] = iso.split("-");
@@ -30,26 +25,23 @@ export function bugunISO(): string {
   return new Date().toISOString().slice(0, 10);
 }
 
-/** Formik number input'u boşken "" döndürebilir; güvenli sayıya çevir. */
 export function toNumber(deger: unknown): number {
   const n = typeof deger === "number" ? deger : parseFloat(String(deger));
   return Number.isFinite(n) ? n : 0;
 }
 
-/* --------------------------- Amortisman ---------------------------- */
 export function hesaplaYillikAmortisman(alisBedeli: number, amortismanOrani: number): number {
   return (alisBedeli * amortismanOrani) / 100;
 }
 
 export interface AmortismanSatiri {
-  yil: number | null; // takvim yılı (alış tarihi yoksa null)
-  sira: number; // 1. yıl, 2. yıl ...
+  yil: number | null; 
+  sira: number; 
   amortisman: number;
   birikmis: number;
   netDeger: number;
 }
 
-/** Normal (doğrusal) amortisman planı — net değer sıfırlanana kadar. */
 export function hesaplaAmortismanPlani(
   alisBedeli: number,
   amortismanOrani: number,
@@ -75,7 +67,6 @@ export function hesaplaAmortismanPlani(
   return satirlar;
 }
 
-/* ---------------------------- Başlangıç ---------------------------- */
 export function bosFormDegerleri(): SabitKiymetForm {
   return {
     ad: "",

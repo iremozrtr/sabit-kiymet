@@ -24,6 +24,31 @@
       "id": 5,
       "adi": "Antalya Şube",
       "sehir": "Antalya"
+    },
+    {
+      "id": 6,
+      "adi": "Yalova Şube",
+      "sehir": "Yalova"
+    },
+    {
+      "id": 7,
+      "adi": "Tekirdağ Şube",
+      "sehir": "Tekirdağ"
+    },
+    {
+      "id": 8,
+      "adi": "Balıkesir Depo",
+      "sehir": "Balıkesir"
+    },
+    {
+      "id": 9,
+      "adi": "Çanakkale Şube",
+      "sehir": "Çanakkale"
+    },
+    {
+      "id": 10,
+      "adi": "Eskişehir Depo",
+      "sehir": "Eskişehir"
     }
   ],
   "sabitKiymetler": [
@@ -91,7 +116,40 @@
       "durum": "AKTIF",
       "subeId": 2,
       "subeAdi": "Ankara Şube",
-      "id": 6
+      "id": 9
+    },
+    {
+      "ad": "Endüstriyel Jeneratör",
+      "kategori": "MAKINE",
+      "alisTarihi": "2022-06-08",
+      "alisBedeli": 18000,
+      "amortismanOrani": 8,
+      "durum": "HURDA",
+      "subeId": 9,
+      "subeAdi": "Çanakkale Şube",
+      "id": 10
+    },
+    {
+      "ad": "Eski Forklift",
+      "kategori": "TASIT",
+      "alisTarihi": "2026-10-30",
+      "alisBedeli": 19864,
+      "amortismanOrani": 7,
+      "durum": "SATILDI",
+      "subeId": 5,
+      "subeAdi": "Antalya Şube",
+      "id": 11
+    },
+    {
+      "ad": "Klima Sistemi",
+      "kategori": "DEMIRBAS",
+      "alisTarihi": "2027-03-19",
+      "alisBedeli": 200000,
+      "amortismanOrani": 13,
+      "durum": "AKTIF",
+      "subeId": 1,
+      "subeAdi": "İstanbul Merkez",
+      "id": 12
     }
   ]
 }

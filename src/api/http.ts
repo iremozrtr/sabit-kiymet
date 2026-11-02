@@ -20,6 +20,7 @@ export async function http<T>(path: string, init?: RequestInit): Promise<T> {
     throw new ApiError("Sunucuya ulaşılamadı. Bağlantınızı kontrol edin.", 0);
   }
 
+
   if (!res.ok) {
     let message = `İşlem başarısız (HTTP ${res.status}).`;
     try {

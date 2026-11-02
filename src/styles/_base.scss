@@ -2,9 +2,9 @@
   --bg: #f4f5f8;
   --surface: #ffffff;
   --ink: #1b2033;
-  --muted: #6b7289;
+  --muted: #0f0cea;
   --line: #e1e4ec;
-  --accent: #2f5bea;
+  --accent: #250101;
   --accent-soft: #eef2ff;
   --danger: #d93a3a;
   --ok: #1f9d62;
@@ -25,7 +25,6 @@ h1 { margin: 0; font-size: 22px; }
 a { color: var(--accent); text-decoration: none; }
 .muted { color: var(--muted); margin: 2px 0 0; }
 
-/* ---- Layout ---- */
 .app-bar {
   display: flex;
   align-items: center;
@@ -56,7 +55,6 @@ a { color: var(--accent); text-decoration: none; }
 
 .back-link { font-size: 13px; }
 
-/* ---- Buttons ---- */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -80,7 +78,6 @@ a { color: var(--accent); text-decoration: none; }
   &--sm { padding: 4px 10px; font-size: 13px; }
 }
 
-/* ---- Inputs ---- */
 .input {
   width: 100%;
   min-height: 38px;
@@ -106,7 +103,6 @@ a { color: var(--accent); text-decoration: none; }
   &--error .input { border-color: var(--danger); }
 }
 
-/* ---- Alerts / empty ---- */
 .alert {
   margin: 0;
   padding: 10px 14px;
@@ -128,7 +124,6 @@ a { color: var(--accent); text-decoration: none; }
   p { margin: 0; }
 }
 
-/* ---- Tables ---- */
 .table-wrap {
   overflow-x: auto;
   background: var(--surface);
@@ -157,13 +152,12 @@ a { color: var(--accent); text-decoration: none; }
   font-weight: 600;
   border-radius: 999px;
   color: #17603f; background: #e1f5ea;
-  &--satildi { color: #7a5a00; background: #fdf1cf; }
-  &--hurda { color: #8f1f1f; background: #fdecec; }
+  &--satildi { color: #a51288; background: #fdf1cf; }
+  &--hurda { color: #6d1818; background: #fdecec; }
 }
 
 .modal-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 16px; }
 
-/* Mobil: tablo satırları kart gibi dizilir */
 @media (max-width: 760px) {
   .table {
     thead { display: none; }

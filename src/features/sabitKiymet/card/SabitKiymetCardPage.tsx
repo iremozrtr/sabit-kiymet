@@ -2,7 +2,6 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import { ROUTES } from "../../../routes";
 import { SabitKiymetCard } from "./SabitKiymetCard";
 
-/** Route sarmalayıcısı: kart sayfada render edilir; kaydet/sil/vazgeç → Liste. */
 export function SabitKiymetCardPage() {
   const { id } = useParams();
   const navigate = useNavigate();

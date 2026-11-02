@@ -1,6 +1,4 @@
-/* ------------------------------------------------------------------ */
-/*  Enum'lar                                                           */
-/* ------------------------------------------------------------------ */
+
 export enum Kategori {
   Bina = "BINA",
   Tasit = "TASIT",
@@ -14,9 +12,7 @@ export enum Durum {
   Hurda = "HURDA",
 }
 
-/* ------------------------------------------------------------------ */
-/*  Enum -> Label eşlemeleri (tek kaynak)                              */
-/* ------------------------------------------------------------------ */
+
 export const KATEGORI_LABEL: Record<Kategori, string> = {
   [Kategori.Bina]: "Bina",
   [Kategori.Tasit]: "Taşıt",
@@ -27,12 +23,11 @@ export const KATEGORI_LABEL: Record<Kategori, string> = {
 export const DURUM_LABEL: Record<Durum, string> = {
   [Durum.Aktif]: "Aktif",
   [Durum.Satildi]: "Satıldı",
-  [Durum.Hurda]: "Hurda",
+  [Durum.Hurda]: "Hurda", 
+
 };
 
-/* ------------------------------------------------------------------ */
-/*  Enum -> Dropdown option (label eşlemesinden üretilir)              */
-/* ------------------------------------------------------------------ */
+
 export interface SelectOption<T extends string> {
   value: T;
   label: string;
@@ -45,9 +40,7 @@ function toOptions<T extends string>(labels: Record<T, string>): SelectOption<T>
 export const KATEGORI_OPTIONS = toOptions(KATEGORI_LABEL);
 export const DURUM_OPTIONS = toOptions(DURUM_LABEL);
 
-/* ------------------------------------------------------------------ */
-/*  Veri modeli                                                        */
-/* ------------------------------------------------------------------ */
+
 export interface Sube {
   id: number;
   adi: string;
@@ -58,13 +51,14 @@ export interface SabitKiymet {
   id: number;
   ad: string;
   kategori: Kategori;
-  alisTarihi: string; // YYYY-MM-DD
+  alisTarihi: string; 
   alisBedeli: number;
-  amortismanOrani: number; // yıllık %
+  amortismanOrani: number; 
   durum: Durum;
-  subeId: number; // 0 = seçilmedi
+  subeId: number; 
   subeAdi: string;
 }
 
-/** Formik'in yönettiği değerler: id sunucu tarafından verilir. */
+
 export type SabitKiymetForm = Omit<SabitKiymet, "id">;
+

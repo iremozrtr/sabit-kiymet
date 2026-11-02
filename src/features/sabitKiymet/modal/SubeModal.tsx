@@ -7,7 +7,6 @@ import "./SubeModal.scss";
 
 interface SubeModalProps {
   seciliId?: number;
-  /** Seçim callback ile geri döner — modal kendi içinde form state'ine dokunmaz. */
   onSelect: (sube: Sube) => void;
   onClose: () => void;
 }
@@ -28,7 +27,6 @@ export function SubeModal({ seciliId, onSelect, onClose }: SubeModalProps) {
       iptal = true;
     };
   }, []);
-
   const filtreli = useMemo(() => {
     const q = ara.trim().toLocaleLowerCase("tr");
     return q
@@ -63,4 +61,4 @@ export function SubeModal({ seciliId, onSelect, onClose }: SubeModalProps) {
       </div>
     </Modal>
   );
-}
+} 

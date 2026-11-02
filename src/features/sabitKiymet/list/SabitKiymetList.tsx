@@ -72,7 +72,7 @@ export function SabitKiymetList() {
       await deleteSabitKiymet(silinecek.id);
       setSilinecek(null);
       bildir({ mesaj: "Kayıt silindi" });
-      yukle(); // zaten listedeyiz: "listeye dön" = listeyi tazele
+      yukle(); 
     } catch (e) {
       setSilinecek(null);
       bildir({ tur: "error", mesaj: `Kayıt silinemedi: ${hataMesaji(e)}` });
@@ -191,7 +191,6 @@ export function SabitKiymetList() {
         />
       )}
 
-      {/* Aynı Kart bileşeni, modal içinde (isInModal) yeniden kullanılıyor */}
       {hizliEkleAcik && (
         <Modal baslik="Hızlı Ekle" genislik="lg" onClose={() => setHizliEkleAcik(false)}>
           <SabitKiymetCard
