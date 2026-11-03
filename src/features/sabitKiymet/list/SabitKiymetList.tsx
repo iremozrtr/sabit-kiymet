@@ -19,6 +19,7 @@ import {
   formatPara,
   formatTarih,
   hesaplaYillikAmortisman,
+  toNumber,
 } from "../../../utils/_project/sabitKiymet";
 import { SabitKiymetCard } from "../card/SabitKiymetCard";
 import "./SabitKiymetList.scss";
@@ -162,10 +163,10 @@ export function SabitKiymetList() {
                   <td data-label="Ad"><Link to={ROUTES.kart(k.id)} className="row-link">{k.ad}</Link></td>
                   <td data-label="Kategori">{KATEGORI_LABEL[k.kategori]}</td>
                   <td data-label="Alış Tarihi">{formatTarih(k.alisTarihi)}</td>
-                  <td className="num" data-label="Alış Bedeli">{formatPara(k.alisBedeli)}</td>
-                  <td className="num" data-label="Yıllık Amortisman">
-                    {formatPara(hesaplaYillikAmortisman(k.alisBedeli, k.amortismanOrani))}
-                  </td>
+             <td className="num" data-label="Alış Bedeli">{formatPara(toNumber(k.alisBedeli))}</td>
+                     <td className="num" data-label="Yıllık Amortisman">
+                      {formatPara(hesaplaYillikAmortisman(toNumber(k.alisBedeli), toNumber(k.amortismanOrani)))}
+                        </td>
                   <td data-label="Şube">{k.subeAdi || "—"}</td>
                   <td data-label="Durum">
                     <span className={`badge badge--${k.durum.toLowerCase()}`}>{DURUM_LABEL[k.durum]}</span>

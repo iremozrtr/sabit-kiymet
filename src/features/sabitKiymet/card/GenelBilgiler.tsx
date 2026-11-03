@@ -43,8 +43,7 @@ export function GenelBilgiler({ formik, yillikAmortisman, onSubeSec, onSubeTemiz
           onBlur={handleBlur}
         />
       </FormField>
-      <FormField etiket="Alış Bedeli (₺)" htmlFor="alisBedeli" zorunlu hata={hata("alisBedeli")}>
-        <input
+      <FormField etiket="Alış Bedeli (₺)" htmlFor="alisBedeli" zorunlu hata={hata("alisBedeli")}>       <input
           id="alisBedeli"
           name="alisBedeli"
           type="number"
