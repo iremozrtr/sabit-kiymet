@@ -10,9 +10,11 @@ export const sabitKiymetSchema = Yup.object({
     .required("Alış bedeli zorunludur.")
     .moreThan(0, "Alış bedeli 0'dan büyük olmalı."),
   amortismanOrani: Yup.number()
+      .transform ((value, original) => (original === "" || original === null ? undefined : value))
     .typeError("Geçerli bir sayı girin.")
-    .min(0, "Oran 0'dan küçük olamaz.")
-    .max(100, "Oran 100'den büyük olamaz."),
+    .required("Amortisman oranı zorunludur.")
+    .moreThan(0, "Oran 0'dan büyük olmalı.")
+    .max(100, "Oran 100'den küçük olmalı."),
   durum: Yup.mixed<Durum>().oneOf(Object.values(Durum)).required(),
   subeId: Yup.number().required(),
   subeAdi: Yup.string(),
